@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Playpen+Sans:wght@400;700&display=swap');
+
+
+body{
+  font-family: 'Playpen Sans', cursive;
+  font-size: 1.3em;
+}
+
+main{
+  background-color: gray;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+  height: 100vh;
+}
+
+
+main div{
+  flex-basis: 10%;
+  margin: 1.2em 0.8em 1.2em 0.8em;
+  padding:5em;
+  text-align: flex-start;
+  background-color: green;
+
+  box-shadow: 3px 6px 12px #333;
+  transition: transform 300ms ease, box-shadow 300ms ease;
+  position: relative;
+}
+
+h1{
+  font-size: 1.8em;
+  margin-bottom: 0.5em;
+}
+
+.giallo{
+  animation-name: posting, rotateGiallo;
+  animation-duration: 4s,2s;
+  animation-delay: 0s, 4s;
+
+
+  background: linear-gradient(180deg, rgba(248,249,199,1) 10%, rgba(187,187,125,1) 80%);
+  transform: rotate(-5deg);
+}
+
+.verde{
+  animation-name: posting, rotateVerde;
+  animation-duration: 2s,2s;
+  animation-delay: 0s, 2s;
+
+
+  background: linear-gradient(180deg, rgb(170, 231, 173) 19%, rgba(158,181,161,1) 80%);
+  transform: rotate(5deg);
+}
+
+.viola{
+  animation-name: posting, rotateViola;
+  animation-duration: 7s,2s;
+  animation-delay: 0s, 6s;
+
+
+  background: linear-gradient(180deg, rgba(198,198,241,1) 19%, rgba(139,140,155,1) 80%);
+  transform: rotate(-5deg);
+}
+
+/*Hover*/
+
+main div:hover{
+transform: scale(1.2);
+z-index: 5;
+cursor: pointer;
+box-shadow: 3px 6px 12px #000000;
+}
+
+/* main:has(:hover) > div:not(:hover){
+  scale: 0.9;
+  opacity: 0.9;
+} */
+
+@keyframes posting{
+  from{top: -80px ;transform: rotate(0deg)}
+  to{top: 0px ; transform: rotate(0deg)}
+}
+
+@keyframes rotateVerde{
+  from{transform: rotate(0deg)}
+  50%{transform: rotate(-3deg)}
+  to{transform: rotate(5deg)}
+}
+@keyframes rotateGiallo{
+  from{transform: rotate(0deg)}
+  50%{transform: rotate(4deg)}
+  to{transform: rotate(-5deg)}
+}
+@keyframes rotateViola{
+  from{transform: rotate(0deg)}
+  50%{transform: rotate(360deg)}
+  to{transform: rotate(-5deg)}
+}
+

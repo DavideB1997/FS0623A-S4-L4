@@ -1,0 +1,62 @@
+main{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+#testoAlternato{
+  width: 35%;
+  font-size: 1.4em;
+  font-weight: bold;
+  margin-top: 2em;
+  padding: 2em;
+  
+  background-color:white;
+  border: 2px solid black;
+
+  overflow: hidden;
+}
+
+.parole{
+  position:relative;
+
+  
+}
+
+.parole i{
+  position: absolute;
+  color: #66869B;
+
+  top:-200px;
+  opacity: 1;
+  animation-name: fadeInOut;
+  animation-duration: 5s;
+}
+
+.parole i:nth-child(2){
+  animation-delay: 5s;
+}
+.parole i:nth-child(3){
+  animation-delay: 10s;
+}
+
+
+@keyframes fadeInOut {
+  from{top:-100px ; opacity: 0}
+  40%{top: 0px ;opacity:1}
+  60%{top: 0px;opacity:1}
+  to{top: 100px ; opacity: 0}
+}
+
+/*
+
+1 creazione del testo e formattazione di 1 parola da far ruotare
+2 inserimento delle altre 2 parole
+3 sovrapporre le 3 parole
+4 mostrare 1 parola e nascondere le altre 2
+5 animare 1 parola (fadein - fadeout con spostamento)
+6 animare le altre 2 parole
+7 ritardare progressivamente l'animazione delle altre 2 parole 
+*/
+
